@@ -5,7 +5,6 @@ WORKDIR /opt/app-root/src
 
 # 앱 의존성 설치
 COPY package.json /opt/app-root/src
-RUN npm install
 
 # 앱 소스 추가
 COPY . /opt/app-root/src
