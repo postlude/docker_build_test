@@ -9,5 +9,7 @@ COPY package.json /opt/app-root/src
 # 앱 소스 추가
 COPY . /opt/app-root/src
 
+RUN chmod 755 test.sh
+
 EXPOSE 8080
 CMD [ "npm", "start" ]
