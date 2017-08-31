@@ -7,4 +7,4 @@ COPY package.json /opt/app-root/src
 # 앱 소스 추가
 COPY . /opt/app-root/src
 
-CMD [ "npm", "start" ]
+CMD [ "node", "server.js" ]
