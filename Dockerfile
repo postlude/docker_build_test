@@ -1,3 +1,3 @@
-FROM pasregistry.lotte.cloud:5000/jboss-eap-6/eap64-openshift:1.4
+FROM pasregistry.lotte.cloud:5000/openshift/nodejs-6-rhel7:6
 
-COPY ROOT.war /deployments/
+ADD test.sh
