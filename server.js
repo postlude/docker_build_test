@@ -1,16 +1,25 @@
-'use strict';
+//  OpenShift sample Node application
+var express = require('express'),
+    fs      = require('fs'),
+    app     = express(),
+    eps     = require('ejs'),
+    morgan  = require('morgan');
+    
+Object.assign=require('object-assign')
 
-const express = require('express');
+app.engine('html', require('ejs').renderFile);
+app.use(morgan('combined'))
 
-// 상수
-const PORT = 8080;
-const HOST = '0.0.0.0';
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
-// 앱
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello world\n');
+// error handling
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.status(500).send('Something bad happened!');
 });
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(port, ip);
+console.log('Server running on http://%s:%s', ip, port);
+
+module.exports = app ;
