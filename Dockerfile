@@ -13,7 +13,5 @@ USER root
 
 RUN chmod 755 test.sh
 
-RUN yum install -y crontabs
-
 EXPOSE 8080
 CMD [ "npm", "start" ]
