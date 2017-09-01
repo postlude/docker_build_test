@@ -6,4 +6,4 @@ export LD_LIBRARY_PATH PATH
 
 node -v
 
-scp /opt/app-root/src/test_file 172.30.16.4:/opt/app-root/src/volume1/
+scp /opt/app-root/src/test_file nobody@172.30.16.4:/opt/app-root/src/volume1/
