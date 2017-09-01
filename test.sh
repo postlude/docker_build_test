@@ -1,5 +1,7 @@
 LD_LIBRARY_PATH="/opt/rh/rh-nodejs6/root/usr/lib64"
 
-export LD_LIBRARY_PATH
+PATH=${PATH}:/opt/rh/rh-nodejs6/root/usr/bin
 
-/opt/rh/rh-nodejs6/root/usr/bin/node -v
+export LD_LIBRARY_PATH PATH
+
+node -v
