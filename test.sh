@@ -4,6 +4,8 @@
 
 ##export LD_LIBRARY_PATH PATH
 
+env
+
 node -v
 
-cp /opt/app-root/src/test_file /opt/app-root/src/volume1/
+##cp /opt/app-root/src/test_file /opt/app-root/src/volume1/
